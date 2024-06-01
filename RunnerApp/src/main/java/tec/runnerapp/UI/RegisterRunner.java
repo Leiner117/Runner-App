@@ -169,6 +169,16 @@ public class RegisterRunner extends javax.swing.JFrame {
 
         Runner runner = new Runner(name, email, password, number, blood);
         RunnerList.addRunner(runner);
+
+        //mensaje de exito 
+        javax.swing.JOptionPane.showMessageDialog(this, "Corredor registrado con exito", "Éxito", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+        //vaciar campos
+        txtName.setText("");
+        txtEmail.setText("");
+        txtPassword.setText("");
+        txtNumber.setText("");
+        txtBlood.setText("");
+        
     }
 
     private void btnLeaveActionPerformed(java.awt.event.ActionEvent evt) {

@@ -15,10 +15,9 @@ public class RegistrationList {
     public static void addRegistration(Registration registration) {
         getInstance().add(registration);
     }
-    //TODO: FIX ERROR
-    public static Registration getRegistrationByParticipantNum(String participantNumber) {
+    public static Registration getRegistrationByName(String name) {
         for (Registration registration : getInstance()) {
-            if (registration.getParticipantNumber() == Integer.parseInt(participantNumber)) {
+            if (registration.getRunner().getName().equals(name)) {
                 return registration;
             }
         }

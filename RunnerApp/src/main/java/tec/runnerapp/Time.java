@@ -3,10 +3,12 @@ package tec.runnerapp;
 public class Time {
     private String segment;
     private long time;
+    private Runner runner;
 
-    public Time(String segment, long time) {
+    public Time(String segment, long time, Runner runner) {
         this.segment = segment;
         this.time = time;
+        this.runner = runner;
     }
 
     // Getters and Setters
@@ -25,5 +27,13 @@ public class Time {
 
     public void setTime(long time) {
         this.time = time;
+    }
+
+    public Runner getRunner() {
+        return runner;
+    }
+
+    public void setRunner(Runner runner) {
+        this.runner = runner;
     }
 }

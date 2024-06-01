@@ -1,29 +1,31 @@
 package tec.runnerapp;
 
+import java.io.File;
+
 public class Multimedia {
-    private String type; // Photo or Video
-    private String url;
+    private Runner runner; // Photo 
+    private File photo;
 
-    public Multimedia(String type, String url) {
-        this.type = type;
-        this.url = url;
+    public Multimedia(Runner runner, File photo) {
+        this.runner = runner;
+        this.photo = photo;
     }
 
-    // Getters and Setters
-
-    public String getType() {
-        return type;
+    public Runner getRunner() {
+        return runner;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setRunner(Runner runner) {
+        this.runner = runner;
     }
 
-    public String getUrl() {
-        return url;
+    public File getPhoto() {
+        return photo;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setPhoto(File photo) {
+        this.photo = photo;
     }
+
+    
 }

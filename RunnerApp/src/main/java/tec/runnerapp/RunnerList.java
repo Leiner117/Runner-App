@@ -24,6 +24,14 @@ public class RunnerList {
         }
         return null;
     }
+    public static Runner getRunnerByEmail(String email) {
+        for (Runner runner : getInstance()) {
+            if (runner.getEmail().equals(email)) {
+                return runner;
+            }
+        }
+        return null;
+    }
     @Override
     public String toString() {
         //ciclo for que recorre la lista para imprimirla

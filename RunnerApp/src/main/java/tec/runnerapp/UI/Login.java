@@ -4,6 +4,13 @@
  */
 package tec.runnerapp.UI;
 
+import javax.swing.JOptionPane;
+
+import tec.runnerapp.Administrator;
+import tec.runnerapp.AdministratorList;
+import tec.runnerapp.Runner;
+import tec.runnerapp.RunnerList;
+
 /**
  *
  * @author leine
@@ -15,6 +22,8 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        //centrar ventana
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -35,11 +44,7 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        txtEmail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEmailActionPerformed(evt);
-            }
-        });
+        
 
         jLabel1.setText("Correo Electronico");
 
@@ -101,12 +106,50 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtEmailActionPerformed
-
     private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLoginActionPerformed
+        //obtener inputs
+        String email = txtEmail.getText();
+        String password = txtPassword.getText();
+
+        //verificar si el usuario es corredor o admin
+        //verificar si el correo esta en la lista de admin
+        if (AdministratorList.getRegistrationByEmail(email) != null) {
+            //si es admin
+            Administrator admin = AdministratorList.getRegistrationByEmail(email);
+            if (admin.getPassword().equals(password)) {
+                //si la contraseña es correcta
+                AdminMenu adminMenu = new AdminMenu();
+                adminMenu.setVisible(true);
+               
+            } else {
+                //si la contraseña es incorrecta
+                JOptionPane.showMessageDialog(this, "La contraseña es incorrecta", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            //si no es admin
+            //verificar si el correo esta en la lista de corredores
+            if (RunnerList.getRunnerByEmail(email) != null) {
+                //si es corredor
+                Runner runner = RunnerList.getRunnerByEmail(email);
+                if (runner.getPassword().equals(password)) {
+                    //si la contraseña es correcta
+                    RunnerUI runnerMenu = new RunnerUI(runner);
+                    runnerMenu.setVisible(true);
+                    
+                } else {
+                    //si la contraseña es incorrecta
+                    JOptionPane.showMessageDialog(this, "La contraseña es incorrecta", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                //si no esta en ninguna lista
+                // Mensaje emergente 
+                JOptionPane.showMessageDialog(this, "El correo electrónico no está registrado", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
         
+
+        
+
     }//GEN-LAST:event_buttonLoginActionPerformed
 
     /**

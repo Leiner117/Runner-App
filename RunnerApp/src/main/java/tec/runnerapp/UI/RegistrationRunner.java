@@ -187,6 +187,12 @@ public class RegistrationRunner extends javax.swing.JFrame {
         RegistrationList.addRegistration(registration);
         registration.setParticipantNumber(RegistrationList.getInstance().size());
         
+        //mensaje de exito
+        javax.swing.JOptionPane.showMessageDialog(this, "Registro del corredor en la carrera exitoso", "Éxito", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+        //limpiar campos
+        txtEmergencyName.setText("");
+        txtEmergencyNum.setText("");
+        
 
     }//GEN-LAST:event_btnRegisterActionPerformed
 
@@ -196,8 +202,8 @@ public class RegistrationRunner extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLeaveActionPerformed
     private void chargeRunners() {
         cmbRunner.removeAllItems();
-        Runner runner1 = new Runner("Leiner", "leiner@gmail.com", "password", "353335", "A+");
-        RunnerList.addRunner(runner1);
+        //Runner runner1 = new Runner("Leiner", "leiner@gmail.com", "password", "353335", "A+");
+        //RunnerList.addRunner(runner1);
         for (Runner runner : RunnerList.getInstance()) {
             cmbRunner.addItem(runner.getName());
         }

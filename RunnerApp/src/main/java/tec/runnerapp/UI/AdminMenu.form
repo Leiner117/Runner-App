@@ -41,18 +41,18 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton4" min="-2" pref="155" max="-2" attributes="0"/>
+                      <Component id="btnMulti" min="-2" pref="155" max="-2" attributes="0"/>
                       <Component id="btnRegisterRunner" min="-2" pref="150" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="117" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton3" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
-                      <Component id="jButton2" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="btnRegiTime" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="btnRegis" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="jButton5" min="-2" pref="150" max="-2" attributes="0"/>
+                  <Component id="btnLeave" min="-2" pref="150" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -63,15 +63,15 @@
                   <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnRegisterRunner" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
-                      <Component id="jButton2" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
+                      <Component id="btnRegis" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton4" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
-                      <Component id="jButton3" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
+                      <Component id="btnMulti" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
+                      <Component id="btnRegiTime" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="69" max="32767" attributes="0"/>
-                  <Component id="jButton5" min="-2" pref="55" max="-2" attributes="0"/>
+                  <Component id="btnLeave" min="-2" pref="55" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -86,31 +86,37 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegisterRunnerActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="btnRegis">
           <Properties>
             <Property name="text" type="java.lang.String" value="Inscripci&#xf3;n"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegisActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="btnRegiTime">
           <Properties>
             <Property name="text" type="java.lang.String" value="Registrar tiempo"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegiTimeActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton4">
+        <Component class="javax.swing.JButton" name="btnMulti">
           <Properties>
             <Property name="text" type="java.lang.String" value="Multimedia"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMultiActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton5">
+        <Component class="javax.swing.JButton" name="btnLeave">
           <Properties>
             <Property name="text" type="java.lang.String" value="Salir"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLeaveActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
